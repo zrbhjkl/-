@@ -1,0 +1,16 @@
+proxies:
+  - name: TG-SOCKS5-116.206.93.25
+    type: socks5
+    server: 116.206.93.25
+    port: 1688
+    udp: true
+
+proxy-groups:
+  - name: 🚀 Proxy
+    type: select
+    proxies:
+      - TG-SOCKS5-116.206.93.25
+      - DIRECT
+
+rules:
+  - MATCH,🚀 Proxy
